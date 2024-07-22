@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { cn } from "@/lib/utils";
@@ -29,6 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Header />
           <main className="mt-24">
             {children}
+            <Analytics />
             <SpeedInsights />
           </main>
           <Footer />
