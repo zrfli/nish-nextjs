@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { cn } from "@/lib/utils";
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main className="mt-24">{children}</main>
+          <main className="mt-24">
+            {children}
+            <SpeedInsights />
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
