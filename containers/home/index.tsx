@@ -163,7 +163,7 @@ export default function HomeContainer() {
         <DialogHeader className="border-b text-left border-neutral-600 pb-4">
           <DialogTitle>NishCard Bakiye Yükleme</DialogTitle>
         </DialogHeader>
-        <div id="nishPayContent">
+        <div className="p-4 h-auto max-h-[30rem] overflow-x-hidden overflow-y-auto" id="nishPayContent">
           <h3 className="mb-2 text-base font-semibold dark:text-white">Hesap Bilgileri</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="gap-4 space-y-2 text-center">
