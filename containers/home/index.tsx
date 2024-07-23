@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image"; 
 
 export default function HomeContainer() { 
-    return <>
+
+  return <>
     <section id="carousel" className="relative mt-2" data-carousel="static">
         <div id="baseCarousel" className="relative h-96 overflow-hidden">
             <div className="duration-400 ease-linear bg-gray-200 dark:bg-neutral-800 absolute inset-0 transition-transform transform translate-x-0 z-30" data-carousel-item="">
@@ -137,7 +138,7 @@ export default function HomeContainer() {
         </div>
       </div>
     </section>
-    <section className="bg-neutral-500 bg-cover bg-center bg-no-repeat bg-blend-multiply bg-[url('/498a6090-80e5-4214-b6ee-939ded26d017.webp')]">
+    <section className="bg-gray-500 bg-cover bg-center bg-no-repeat bg-blend-multiply bg-[url('/498a6090-80e5-4214-b6ee-939ded26d017.webp')]">
       <div className="relative mx-auto max-w-screen-xl px-4 py-10 xl:px-0"> 
         <div className="mb-6 max-w-screen-md lg:mb-0">
           <h2 className="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">Üniversite Adaylarına Merhaba!</h2>
