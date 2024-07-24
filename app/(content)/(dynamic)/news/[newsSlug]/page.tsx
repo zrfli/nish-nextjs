@@ -4,19 +4,20 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-export default async function news({ params } : { params: { newsSlug : string}}) {
+export default async function news({ params } : { params: { newsSlug : string }}) {
   const post = await prisma.post.findUnique({
     where: {
       slug: params.newsSlug, 
     },
     select: {
       title: true,
+      slug: true,
       content: true,
       createdAt: true,
     },
   });
 
-  if (!post) { notFound(); return null; }
+  if (!post) { return notFound(); }
 
   return  <div className="mt-20 lg:mt-24">
             <section className="w-full h-64 bg-no-repeat bg-cover bg-center relative border-b border-gray-700 bg-[url('/content/ebbb311c-1696-44ac-838a-6194dd216016.webp')]">
