@@ -5,9 +5,6 @@ const prisma = new PrismaClient();
 
 export default async function news({ params } : { params: { newsSlug : string }}) {
   const post = await prisma.post.findUnique({
-    where: {
-      slug: params.newsSlug, 
-    },
     select: {
       title: true,
       slug: true,
