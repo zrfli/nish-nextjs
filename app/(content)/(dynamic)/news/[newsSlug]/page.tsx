@@ -4,7 +4,10 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export default async function news({ params } : { params: { newsSlug : string }}) {
-  const post = await prisma.post.findUnique({
+  const post = await prisma.post.findFirst({
+    where: {
+      slug: params.newsSlug, 
+    },
     select: {
       title: true,
       slug: true,
