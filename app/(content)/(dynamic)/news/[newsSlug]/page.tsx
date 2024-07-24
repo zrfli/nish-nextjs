@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 
 import { PrismaClient } from '@prisma/client'
 
+const prisma = new PrismaClient()
+
 export default async function news({ params } : { params: { newsSlug : string}}) {
-  const prisma = new PrismaClient()
   const post = await prisma.post.findUnique({
     where: {
       slug: params.newsSlug, 
