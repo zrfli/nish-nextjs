@@ -30,14 +30,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-white dark:bg-black font-sans antialiased", fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <React.Fragment>
             <Header />
-            <main>{children}</main>
+            <React.Fragment>
+             <main>{children}</main>
+            </React.Fragment>
             <Analytics />
             <SpeedInsights />
             <Footer />
           </React.Fragment>
-        </ThemeProvider>
       </body>
     </html>
   )
