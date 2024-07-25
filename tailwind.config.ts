@@ -5,7 +5,7 @@ const flowbite = require("flowbite-react/tailwind");
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ["media"],
   content: ["app/**/**/*.{ts,tsx}", "components/**/**/*.{ts,tsx}", "containers/**/**/*.{ts,tsx}", flowbite.content()],
   prefix: "",
   theme: {
