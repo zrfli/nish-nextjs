@@ -1,15 +1,15 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+
+const flowbite = require("flowbite-react/tailwind");
 
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config = {
   darkMode: ["class"],
-  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "containers/**/*.{ts,tsx}"],
+  content: ["app/**/**/*.{ts,tsx}", "components/**/**/*.{ts,tsx}", "containers/**/**/*.{ts,tsx}", flowbite.content()],
   prefix: "",
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
       screens: {
         'sm': '640px',
         'md': '768px',
@@ -43,7 +43,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), flowbite.plugin()],
 } satisfies Config
 
 export default config
