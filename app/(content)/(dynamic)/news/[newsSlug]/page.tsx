@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { PrismaClient } from '@prisma/client
 
+export default async function news({ params } : { params: { newsSlug : string }}) {
   return  <div className="mt-20 lg:mt-24">
             <section className="w-full h-64 bg-no-repeat bg-cover bg-center relative border-b border-gray-700 bg-[url('/content/ebbb311c-1696-44ac-838a-6194dd216016.webp')]">
                 <div className="absolute top-20 left-1/2 px-4 mx-auto w-full max-w-screen-xl -translate-x-1/2 xl:top-1/2 xl:-translate-y-1/2 xl:px-0">
