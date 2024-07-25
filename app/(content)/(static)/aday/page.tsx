@@ -13,49 +13,29 @@ import {
 
 export default function Aday(){
     return (
-        <div className="py-16 min-h-96">
-            <div className="mx-auto max-w-screen-xl p-4">
-                <div className="py-10 grid items-center lg:grid-cols-9">
-                    <div className="col-span-1 lg:col-span-6 text-center sm:mb-6 lg:mb-0 lg:text-left">
-                        <div className="mb-6 text-sm text-black dark:text-white">
-                            <span className="text-sm font-medium text-gray-900 dark:text-gray-300">Aday bilgi formu</span>
-                        </div>
-                        <h1 className="mb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white">Formu gönder + %5 burs kazan</h1>
-                        <div className="mx-auto max-w-xl lg:ml-0" id="applicationForm">
-                            <div className="grid grid-cols-2 gap-3">
-                                <div className="relative z-0 w-full group">
-                                    <label htmlFor="fullName" className="block mb-1 text-xs font-medium text-black dark:text-white">Ad Soyad</label>
-                                    <Input type="text" name="fullName" id="fullName" placeholder="Nişantaşı Üniversitesi" autoComplete="on" maxLength={100} required />
-                                </div>
-                                <div className="relative z-0 w-full group">
-                                    <label htmlFor="phoneNumber" className="block mb-1 text-xs font-medium text-black dark:text-white">Telefon Numarası</label>
-                                    <Input type="number" name="phoneNumber" id="phoneNumber" required />
-                                </div>
-                                <div className="relative z-0 w-full group">
-                                    <label htmlFor="email" className="block mb-1 text-xs font-medium text-black dark:text-white">E-Posta</label>
-                                    <Input type="email" name="email" id="email" placeholder="info@nisantasi.edu.tr" autoComplete="on" maxLength={64} required />
-                                </div>
-                                <div className="relative z-0 w-full group">
-                                    <label htmlFor="grade" className="block mb-1 text-xs font-medium text-black dark:text-white">Sınıf</label>
-                                    <Select>
-                                        <SelectTrigger>
-                                            <SelectValue placeholder="--" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectGroup>
-                                            <SelectLabel>--</SelectLabel>
-                                            <SelectItem value="9">Apple</SelectItem>
-                                            <SelectItem value="10">Banana</SelectItem>
-                                            <SelectItem value="11">Blueberry</SelectItem>
-                                            <SelectItem value="12">Grapes</SelectItem>
-                                            <SelectItem value="99">Pineapple</SelectItem>
-                                            </SelectGroup>
-                                        </SelectContent>
-                                    </Select>
-                                </div>
+        <div className="py-16 min-h-96 mt-8">
+            <div className="py-10 grid items-center lg:grid-cols-9 bg-blue-600">
+                <div className="col-span-1 lg:col-span-6 text-center sm:mb-6 lg:mb-0 lg:text-left mx-auto max-w-screen-xl p-6">
+                    <div className="mb-6">
+                        <span className="text-sm font-medium text-white">Aday bilgi formu</span>
+                    </div>
+                    <h1 className="mb-6 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl text-white">Formu gönder + %5 burs kazan</h1>
+                    <div className="mx-auto max-w-xl lg:ml-0" id="applicationForm">
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="relative z-0 w-full group">
+                                <label htmlFor="fullName" className="block mb-1 text-xs font-medium text-white">Ad Soyad</label>
+                                <Input type="text" name="fullName" id="fullName" placeholder="Nişantaşı Üniversitesi" autoComplete="on" maxLength={100} required />
                             </div>
-                            <div className="relative w-full mt-4 group">
-                                <label htmlFor="programList" className="block mb-1 text-xs font-medium text-black dark:text-white">Hedef Bölüm</label>
+                            <div className="relative z-0 w-full group">
+                                <label htmlFor="phoneNumber" className="block mb-1 text-xs font-medium text-white">Telefon Numarası</label>
+                                <Input type="number" name="phoneNumber" id="phoneNumber" required />
+                            </div>
+                            <div className="relative z-0 w-full group">
+                                <label htmlFor="email" className="block mb-1 text-xs font-medium text-white">E-Posta</label>
+                                <Input type="email" name="email" id="email" placeholder="info@nisantasi.edu.tr" autoComplete="on" maxLength={64} required />
+                            </div>
+                            <div className="relative z-0 w-full group">
+                                <label htmlFor="grade" className="block mb-1 text-xs font-medium text-white">Sınıf</label>
                                 <Select>
                                     <SelectTrigger>
                                         <SelectValue placeholder="--" />
@@ -73,12 +53,32 @@ export default function Aday(){
                                 </Select>
                             </div>
                         </div>
-                    </div>
-                    <div className="mx-auto flex flex-col items-center">
-                        <Image src="/MaviDiploma_Web_Logolar.png" className="max-w-sm h-auto" width={400} height={450} alt="" loading="lazy" decoding="async" />
-                        <Image src="/MaviDiploma_Web_Burslar.png" className="max-w-sm h-auto" width={800} height={450} alt="" loading="lazy" decoding="async" />
+                        <div className="relative w-full mt-4 group">
+                            <label htmlFor="programList" className="block mb-1 text-xs font-medium text-center text-white">Hedef Bölüm</label>
+                            <Select>
+                                <SelectTrigger>
+                                    <SelectValue placeholder="--" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                    <SelectLabel>--</SelectLabel>
+                                    <SelectItem value="9">Apple</SelectItem>
+                                    <SelectItem value="10">Banana</SelectItem>
+                                    <SelectItem value="11">Blueberry</SelectItem>
+                                    <SelectItem value="12">Grapes</SelectItem>
+                                    <SelectItem value="99">Pineapple</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                        </div>
                     </div>
                 </div>
+                <div className="mx-auto flex flex-col items-center">
+                    <Image src="/MaviDiploma_Web_Logolar.png" className="max-w-sm h-auto" width={400} height={450} alt="" loading="lazy" decoding="async" />
+                    <Image src="/MaviDiploma_Web_Burslar.png" className="max-w-sm h-auto" width={800} height={450} alt="" loading="lazy" decoding="async" />
+                </div>
+            </div>
+            <div className="mx-auto max-w-screen-xl p-4">
                 <section className="py-20">
                     <div className="text-center mb-8">
                         <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl dark:text-white mb-2">Akademik Birimlerimiz</h1>
