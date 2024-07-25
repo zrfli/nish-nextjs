@@ -32,9 +32,6 @@ export default function Header(){
                                     </ul>
                                 </div>
                             </div>
-                            <div>
-                                <ThemeToggle />
-                            </div>
                             <div className="lg:hidden" data-collapse-toggle="header-menu">
                                 <button type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800/80" aria-controls="header-menu" aria-expanded="false">
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1" clipRule="evenodd"/></svg>                
