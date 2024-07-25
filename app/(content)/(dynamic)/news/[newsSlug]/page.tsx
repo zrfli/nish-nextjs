@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import { PrismaClient } from '@prisma/client
 
 export default async function news({ params } : { params: { newsSlug : string }}) {
   return  <div className="mt-20 lg:mt-24">
