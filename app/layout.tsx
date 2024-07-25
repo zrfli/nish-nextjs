@@ -1,3 +1,5 @@
+import React from "react";
+
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
@@ -29,11 +31,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={cn("min-h-screen bg-white dark:bg-black font-sans antialiased", fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main className="mt-24">
-            {children}
+          <React.Fragment>
+            <main>{children}</main>
             <Analytics />
             <SpeedInsights />
-          </main>
+          </React.Fragment>
           <Footer />
         </ThemeProvider>
       </body>
