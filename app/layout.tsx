@@ -33,9 +33,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Header />
             <React.Fragment>
              <main>{children}</main>
-             <Analytics />
-             <SpeedInsights />
-            </React.Fragment>
+            <React.Fragment />
+            <Analytics />
+            <SpeedInsights />
             <Footer />
           </React.Fragment>
       </body>
