@@ -25,7 +25,7 @@ export function BaseCarousel() {
           <Carousel slide={false}>
             {Array.from({ length: 5 }).map((_, index) => (
                   <div className="relative h-96 w-full" key={index}>
-                    <Image src="/0ce3cfb8-dcca-47f1-afd7-db00dab10be0.jpg" fill alt="" style={{ objectFit: "cover" }} />
+                    <Image src="/0ce3cfb8-dcca-47f1-afd7-db00dab10be0.jpg" fill alt="" priority={false} style={{ objectFit: "cover" }} />
                   </div>
               ))}
           </Carousel>
