@@ -266,7 +266,7 @@ export default function HomeContainer() {
                 </div>
                 <div className="col-span-6">
                   <video id="applyVideoContent" className="mx-auto h-64 w-full max-w-xl sm:h-96" autoPlay muted loop playsInline preload="none">
-                    <source src="" type="video/webm" />
+                    <source src="/fa6df-2d62-4f2a-ad52-769580e89e38.webm" type="video/webm" />
                   </video>
                 </div>
               </div>
