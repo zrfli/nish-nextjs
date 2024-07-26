@@ -39,7 +39,7 @@ export default function Header(){
                             </div>
                         </div>
                         <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="header-menu">
-                            <ul id="headerMenuContent" className="flex flex-col mt-4 font-medium gap-1 lg:flex-row lg:space-x-8 lg:mt-0">
+                            <ul id="headerMenuContent" className="flex flex-col mt-4 font-semibold gap-1 lg:flex-row lg:space-x-8 lg:mt-0">
                                 <li>
                                     <Link href="/page/kurumsal" prefetch={true} className="flex justify-between border-b items-center py-2 lg:py-0 w-full lg:w-auto border-gray-300 text-black hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-gray-600 dark:text-gray-300 lg:dark:text-white dark:hover:text-gray-300 dark:hover:bg-neutral-800/80 dark:border-neutral-700 hover:underline">
                                         Kurumsal
