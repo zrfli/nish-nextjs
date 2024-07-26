@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={cn("min-h-screen bg-white dark:bg-black font-sans antialiased", fontSans.variable)}>
           <Header />
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <React.Fragment>{children}</React.Fragment>
+            {children}
           </ThemeProvider>
           <Analytics />
           <SpeedInsights />
