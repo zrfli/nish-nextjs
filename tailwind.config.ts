@@ -1,15 +1,21 @@
+import {nextui} from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 
-const flowbite = require("flowbite-react/tailwind");
-
-const { fontFamily } = require("tailwindcss/defaultTheme")
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
-  content: ["app/**/**/*.{ts,tsx}", "components/**/**/*.{ts,tsx}", "containers/**/**/*.{ts,tsx}", flowbite.content()],
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./containers/**/*.{ts,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
+      center: true,
+      padding: "2rem",
       screens: {
         'sm': '640px',
         'md': '768px',
@@ -19,6 +25,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -28,22 +37,14 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), flowbite.plugin()],
+  plugins: [require("tailwindcss-animate"), nextui()],
 } satisfies Config
 
 export default config

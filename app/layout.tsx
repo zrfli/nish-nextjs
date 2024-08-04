@@ -1,36 +1,33 @@
-import React from "react";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
-import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/lib/utils";
+import { Inter as FontSans } from "next/font/google"
+
+import { cn } from "@/lib/utils"
+
 import "@/styles/globals.css";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
+const fontSans = FontSans({subsets: ["latin"], variable: "--font-sans"})
 
 export const metadata: Metadata = {
-  title: 'Nişantaşı Üniversitesi',
-  description: 'nisantasi üniversitesi',
-  authors: [{ name: "Misy", url: "https://misy.dev" }],
-}
+  title: "Nisantasi University - New Generation Education",
+  description: "nisantasi-dev",
+  authors: [{name: "Eray", url: "https://misy.dev"}]
+};
 
-interface RootLayoutProps { children: React.ReactNode }
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-white dark:bg-black font-sans antialiased", fontSans.variable)}>
+      <head />
+      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Header />
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
-          </ThemeProvider>
-          <Analytics />
-          <SpeedInsights />
+          <main>{children}</main>
           <Footer />
+        </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

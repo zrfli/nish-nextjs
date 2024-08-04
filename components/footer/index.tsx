@@ -1,17 +1,13 @@
 "use client" 
 
-import Logo from "@/public/logo.png";
-import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/logo";
 
 export default function Footer() { 
     return <footer className="border-gray-700 dark:border-neutral-700 bg-black border-t">
             <div className="lg:-10 max-w-screen-xl md:p-8 mx-auto p-4 py-6">
                 <div className="gap-8 grid grid-cols-2 lg:grid-cols-6">
                 <div className="col-span-2" id="contactInformation">
-                    <Link className="mb-2 flex items-center" href="/" rel="noopener noreferrer" aria-hidden="true">
-                        <Image priority={false} className="fill-black dark:fill-white h-auto w-28 md:w-32" src={Logo} height={500} width={500} alt="" />
-                    </Link>
+                    <Logo LogoClass="h-auto w-32 invert" />
                     <p className="my-4 text-gray-400" id="layoutContact">Maslak Mahalesi, Taşyoncası Sokak, No: 1V ve No:1Y Sarıyer-İstanbul <a href="tel:+902122101010" className="text-white underline">+90 (212) 210 10 10</a>
                     </p>
                     <ul className="flex mt-5 space-x-6">
@@ -125,7 +121,7 @@ export default function Footer() {
                 </div>
                 </div>
                 <div className="border-gray-700 dark:border-neutral-700 lg:my-8 my-6 sm:mx-auto"></div>
-                <span className="text-gray-400 block text-center text-sm">© 2021 İstanbul Nişantaşı Üniversitesi</span>
+                <span className="text-gray-400 block text-center text-sm">© 2018 İstanbul Yeni Yüzyıl Üniversitesi Bilgi İşlem Daire Başkanlığı - Tüm Hakları Saklıdır.</span>
                 <span className="text-gray-400 block text-center text-sm">Developed by <a className="hover:text-purple-400 text-purple-300 underline" href="https://misyy.vercel.app" target="_blank">Misy</a>
                 </span>
             </div>
