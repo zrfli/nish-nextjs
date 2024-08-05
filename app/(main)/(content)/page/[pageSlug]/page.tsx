@@ -1,7 +1,13 @@
-"use client";
+import {notFound} from "next/navigation";
 
-export default function Page({ params } : { params : { pageSlug : any }}) {
-    
+export default async function Page({ params } : { params : { pageSlug : any }}) {
+    const req = await  fetch('http://127.0.0.1:3001/user/cat/1');
+    const res = await req.json();
+
+    if (!res) { return notFound(); }
+
+    console.table(res ?? 'Error');
+
     return <>
             <section className="w-full h-64 bg-no-repeat bg-cover bg-gray-300 bg-left bg-blend-multiply relative border-b border-gray-700" style={{ backgroundImage: `url('/ebbb311c-1696-44ac-838a-6194dd216016.webp')` }}>
                 <div className="absolute top-20 left-1/2 px-4 mx-auto w-full max-w-screen-xl -translate-x-1/2 xl:top-1/2 xl:-translate-y-1/2 xl:px-0">

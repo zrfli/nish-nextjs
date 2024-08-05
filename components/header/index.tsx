@@ -18,7 +18,7 @@ export default function App() {
   ];
 
   return (
-    <Navbar disableAnimation isBordered className="py-3" maxWidth="full">
+    <Navbar disableAnimation isBordered isBlurred={false} className="py-3" maxWidth="full">
       <NavbarContent justify="start">
         <Logo LogoClass="h-auto w-24 md:w-32 dark:invert" />
       </NavbarContent>
