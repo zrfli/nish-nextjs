@@ -12,7 +12,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 const fontSans = FontSans({subsets: ["latin"], variable: "--font-sans"})
 
 export const metadata: Metadata = {
-  title: "Nisantasi University - New Generation Education",
+  title: "test",
   description: "nisantasi-dev",
   authors: [{name: "Eray", url: "https://misy.dev"}]
 };
